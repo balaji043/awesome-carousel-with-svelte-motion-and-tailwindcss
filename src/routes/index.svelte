@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Carousel from '$lib/components/Carousel.svelte';
 	import GameCard from '$lib/components/GameCard.svelte';
-import NavBar from '$lib/components/NavBar.svelte';
+	import NavBar from '$lib/components/NavBar.svelte';
 	import { games } from '$lib/data';
 	import { createTweenedProgress } from '$lib/mask-tweened';
 	import { onMount } from 'svelte';
@@ -40,7 +40,7 @@ import NavBar from '$lib/components/NavBar.svelte';
 >
 	<NavBar />
 	<div class="grid grid-cols-12 m-8 gap-4">
-		<Carousel classNames="col-span-9" game={currentGame} />
+		<Carousel classNames="col-span-12 md:col-span-9" game={currentGame} />
 		<div class="col-span-3 bg-gray-800 relative">
 			{#each games as game, index}
 				<!-- content here -->
