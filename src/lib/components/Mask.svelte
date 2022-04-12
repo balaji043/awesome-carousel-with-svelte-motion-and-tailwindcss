@@ -1,0 +1,10 @@
+<script lang="ts">
+	export let classNames: string = "";
+</script>
+
+<div
+	class="absolute top-0 right-0 bottom-0 left-0 
+            w-full h-full overflow-hidden bg-fixed 
+            {classNames}"
+	{...$$restProps}
+/>
