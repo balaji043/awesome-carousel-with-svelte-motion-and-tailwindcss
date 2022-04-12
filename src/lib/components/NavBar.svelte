@@ -118,7 +118,7 @@
 			<a
 				type="button"
 				class="inline-block px-3 py-2 bg-slate-600 fill-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
-				href="https://www.youtube.com/channel/UCRDXyiiNrY2Ppwav37GVQoA"
+				href="https://github.com/balaji043/awesome-carousel-with-svelte-motion-and-tailwindcss"
 				target="_blank"
 			>
 				<svg width="22" height="22" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
