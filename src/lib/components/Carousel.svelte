@@ -12,7 +12,7 @@
 			<Mask classNames="bg-gray-700 opacity-60 rounded-lg" />
 		</figure>
 	{/key}
-	<div class="absolute left-10 bottom-10 md:w-1/2 flex flex-col gap-3 z-[1]">
+	<div class="absolute left-10 bottom-10 mr-8 md:w-1/2 flex flex-col gap-3 z-[1]">
 		{#key game}
 			<h1 in:fly={{ x: 500, duration: 1400 }} class="text-2xl md:text-5xl">
 				{game.name}

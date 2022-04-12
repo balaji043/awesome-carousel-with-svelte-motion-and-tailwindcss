@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Mask from './Mask.svelte';
 	export let game: any;
-	export let currentGame: any;
+	export let isCurrentCard: boolean = false;
 	export let progress: number = 0;
 </script>
 
@@ -10,7 +10,7 @@
 		<img class="w-1/6 rounded-md" src={game.img.sm} alt={game.name} />
 		<p>{game.name}</p>
 	</div>
-	{#if game.name === currentGame.name}
+	{#if isCurrentCard}
 		<Mask classNames="bg-slate-900 rounded-xl" style="width: {progress}%" />
 	{/if}
 </button>
