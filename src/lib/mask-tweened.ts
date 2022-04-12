@@ -1,5 +1,5 @@
-import { linear } from "svelte/easing";
-import { tweened, type Tweened } from "svelte/motion";
+import { linear } from 'svelte/easing';
+import { tweened, type Tweened } from 'svelte/motion';
 
 export const createTweenedProgress = () => {
 	const duration = 4600;
@@ -19,13 +19,13 @@ export const createTweenedProgress = () => {
 	};
 	const resume = () => {
 		tween.set(1, {
-			duration: duration - (duration * lastValue)
+			duration: duration - duration * lastValue
 		});
 	};
 	return {
 		subscribe: tween.subscribe,
 		start,
-        pause,
-        resume
+		pause,
+		resume
 	};
 };
