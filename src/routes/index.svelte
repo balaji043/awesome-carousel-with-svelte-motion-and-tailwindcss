@@ -8,8 +8,7 @@
 </svelte:head>
 
 <main
-	class="text-white h-screen
-            overflow-hidden max-w-7xl mx-auto relative"
+	class="h-screen overflow-hidden max-w-2xl md:max-w-3xl lg:max-w-7xl mx-auto mt-8"
 >
 	<NavBar />
 	<AwesomeCarousel />

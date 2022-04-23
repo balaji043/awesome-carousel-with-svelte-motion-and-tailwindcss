@@ -1,12 +1,12 @@
-import { linear } from 'svelte/easing';
 import { tweened, type Tweened } from 'svelte/motion';
-
-export const createTweenedProgress = () => {
+import { linear } from 'svelte/easing';
+export const createMaskTweened = () => {
 	const duration = 4600;
 	let lastValue = 0;
 	const tween: Tweened<number> = tweened(0, {
 		easing: linear
 	});
+
 	const start = () => {
 		tween.set(0, { duration: 0 });
 		tween.set(1, { duration, delay: 20 });
@@ -17,6 +17,7 @@ export const createTweenedProgress = () => {
 			return v;
 		});
 	};
+
 	const resume = () => {
 		tween.set(1, {
 			duration: duration - duration * lastValue
