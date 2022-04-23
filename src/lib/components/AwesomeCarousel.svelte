@@ -2,14 +2,12 @@
 	import { games, type IGame } from '$lib/utils/data';
 	import Carousel from './Carousel.svelte';
 	import GameCard from './GameCard.svelte';
-	import { createMaskTweened } from '$lib/stores/mask-tweened';
+	import { maskedTween } from '$lib/stores/mask-tweened';
 	import PlayPauseButton from './PlayPauseButton.svelte';
 
 	let currentGameIndex = 0;
 	let currentGame: IGame;
 	let isPlay = true;
-
-	const maskedTween = createMaskTweened();
 
 	$: {
 		currentGame = games[currentGameIndex];
@@ -45,14 +43,4 @@
 		{/each}
 	</div>
 </section>
-<PlayPauseButton
-	on:click={() => {
-		if (isPlay) {
-			maskedTween.pause();
-		} else {
-			maskedTween.resume();
-		}
-		isPlay = !isPlay;
-	}}
-	{isPlay}
-/>
+<PlayPauseButton bind:isPlay />

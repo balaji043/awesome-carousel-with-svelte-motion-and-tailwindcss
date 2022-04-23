@@ -30,3 +30,4 @@ export const createMaskTweened = () => {
 		resume
 	};
 };
+export const maskedTween = createMaskTweened();

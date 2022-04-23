@@ -1,18 +1,21 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
+	import { maskedTween } from '$lib/stores/mask-tweened';
 	export let isPlay = false;
 </script>
 
 <button
-	on:click
+	on:click={() => {
+		if (isPlay) {
+			maskedTween.pause();
+		} else {
+			maskedTween.resume();
+		}
+		isPlay = !isPlay;
+	}}
 	class=" rounded-full bg-blue-600 absolute right-10 bottom-10 w-9 h-9"
 >
-	<svg
-		viewBox="0 0 16 16"
-		class="w-8 fill-white"
-		class:ml-1={!isPlay}
-		class:ml-2px={isPlay}
-	>
+	<svg viewBox="0 0 16 16" class="w-8 fill-white" class:ml-1={!isPlay} class:ml-2px={isPlay}>
 		{#if isPlay}
 			<path
 				transition:fly={{ x: -100, duration: 500 }}
